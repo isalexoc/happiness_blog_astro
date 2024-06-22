@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../images/logo.png";
+import logo from "../images/logoblog.png";
 ---
 
 <nav class="bg-gray-900 text-white">
@@ -10,14 +10,10 @@ import logo from "../images/logo.png";
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <Image
         src={logo}
-        class="h-14"
-        alt="TechPeople Logo"
-        width={55}
-        height={55}
+        alt="Happiness park blog Logo"
+        width={220}
+        height={100}
       />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap"
-        ><span class="text-indigo-400">Tech</span>People</span
-      >
     </a>
     <button
       data-collapse-toggle="navbar-default"
@@ -26,7 +22,7 @@ import logo from "../images/logo.png";
       aria-controls="navbar-default"
       aria-expanded="false"
     >
-      <span class="sr-only">Open main menu</span>
+      <span class="sr-only">Abrir menú principal</span>
       <svg
         class="w-5 h-5"
         aria-hidden="true"
@@ -44,27 +40,27 @@ import logo from "../images/logo.png";
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul
-        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 text-white rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 border-gray-700"
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border text-white rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 border-gray-700"
       >
         <li>
           <a
             href="/"
             class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
-            aria-current="page">Home</a
+            aria-current="page">Inicio</a
           >
         </li>
         <li>
           <a
             href="/articulos"
             class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
-            >All Articles</a
+            >Todos los artículos</a
           >
         </li>
         <li>
           <a
             href="/nosotros"
             class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
-            >About</a
+            >Quienes somos</a
           >
         </li>
       </ul>
