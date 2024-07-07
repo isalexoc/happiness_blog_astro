@@ -1,65 +1,214 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+import ProjectCard from "../components/ProjectCard.astro";
 import { Image } from "astro:assets";
-import about from "../images/about.jpg";
-import team1 from "../images/team1.png";
-import team2 from "../images/team2.png";
-import team3 from "../images/team3.png";
+
+import project1 from "../images/project-1.jpg";
+import project2 from "../images/project-2.jpg";
+import project3 from "../images/project-3.jpg";
+import project4 from "../images/project-4.jpg";
+import project5 from "../images/project-5.jpg";
+import project6 from "../images/project-6.jpg";
+
+import { FaCheck } from "react-icons/fa";
+import parkDetailsImage from "../images/details-1.jpg";
+import parkMaintenanceImage from "../images/details-2.jpg";
 ---
 
 <MainLayout title="Acerca de Happiness Park Blog">
-  <h1 class="text-4xl font-bold mb-5">About TechPeople</h1>
-  <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-    <div class="w-full md:w-1/2 mb-8 md:mb-0">
-      <Image
-        src={about}
-        alt="Tech People Team"
-        class="w-full h-auto rounded-lg shadow-lg"
-      />
+  <div class="mb-6">
+    <div class="mb-5 flex flex-col items-center text-center">
+      <h5 class="bg-gray-900 font-bold text-white rounded px-2 py-1 uppercase">
+        Servicios
+      </h5>
+      <br />
+      <h2 class="font-bold text-2xl">
+        Estos son algunos de los servicios que ofrecemos
+      </h2>
+      <p class="text-lg">
+        Nos enorgullecemos de ofrecer un espacio único de diversión y
+        aprendizaje para los niños. Descubre lo que nos hace especiales:
+      </p>
     </div>
-    <div class="w-full md:w-1/2">
-      <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Who We Are</h2>
-      <p class="text-gray-700 leading-relaxed mb-6">
-        We are Tech People, a passionate team of tech enthusiasts dedicated to
-        bringing you the latest news, articles, and tutorials on all things
-        technology.
-      </p>
-      <p class="text-gray-700 leading-relaxed mb-6">
-        Our mission is to empower and educate our readers, helping them stay
-        up-to-date with the rapidly evolving world of technology. Whether you're
-        a seasoned developer, a gadget enthusiast, or just curious about the
-        latest tech trends, we've got you covered.
-      </p>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ProjectCard
+        link="https://www.happinesspark.net/picatutorta"
+        imgSrc={project1}
+        altText="picatutorta"
+        title="Pica Tu Torta"
+        description="Un lugar mágico para celebrar el cumpleaños de los más pequeños, donde los niños disfrutan de su día especial rodeados de diversión y alegría."
+      />
+      <ProjectCard
+        link="https://www.happinesspark.net/fiestaprivada"
+        imgSrc={project2}
+        altText="fiestaprivada"
+        title="Paquetes privados"
+        description="Espacio exclusivo para celebraciones íntimas, donde cada detalle es personalizado para crear recuerdos inolvidables."
+      />
+      <ProjectCard
+        link="https://www.happinesspark.net/eventos"
+        imgSrc={project3}
+        altText="eventos"
+        title="Eventos"
+        description="Organizamos una variedad de eventos temáticos y actividades especiales, garantizando diversión y aventura para todas las edades."
+      />
+
+      <ProjectCard
+        link="https://www.happinesspark.net/snackscoffe"
+        imgSrc={project4}
+        altText="snackscoffe"
+        title="Snacks & Coffee"
+        description="Una acogedora área para disfrutar de deliciosos bocadillos y bebidas, perfecta para un descanso entre juegos y risas."
+      />
+      <ProjectCard
+        link="https://www.happinesspark.net/educacion"
+        imgSrc={project5}
+        altText="educacion"
+        title="Educación"
+        description="Programas educativos y talleres interactivos diseñados para estimular el aprendizaje y la creatividad de los niños."
+      />
+      <ProjectCard
+        link="https://www.happinesspark.net/entretenimiento"
+        imgSrc={project6}
+        altText="entretenimiento"
+        title="Entretenimiento"
+        description="Ofrecemos una amplia gama de actividades y juegos, desde áreas de juegos clásicos hasta RV."
+      />
     </div>
   </div>
 
-  <!-- Team -->
-  <div class="mt-10">
-    <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Our Team</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team1} alt="Team Member 1" class="w-full h-auto" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
-          <p class="text-gray-70">Founder & Editor-in-Chief</p>
+  <div class="mb-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row pt-16">
+        <div class="lg:w-1/2 lg:pr-8">
+          <h2 class="font-bold text-3xl text-primary">
+            Protección y Bioseguridad
+          </h2>
+          <hr class="my-4 border-primary" />
+          <p class="indentacion mb-4">
+            Implementamos rigurosas medidas de bioseguridad para asegurar la
+            salud y bienestar de nuestros visitantes. Con limpieza y
+            desinfección constantes, garantizamos un ambiente seguro para jugar
+            y aprender.
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-center">
+              <FaCheck className="text-primary mr-3 w-6 h-6 lg:w-12 lg:h-12" />
+              <div>
+                <strong class="text-primary">Estacionamiento Vigilado:</strong>
+                Ofrecemos un estacionamiento amplio con vigilancia continua, para
+                que puedas disfrutar de tu visita con la tranquilidad de que tu vehículo
+                está seguro.
+              </div>
+            </li>
+            <li class="flex items-center">
+              <FaCheck className="text-primary mr-3 w-6 h-6 lg:w-12 lg:h-12" />
+              <div>
+                <strong class="text-primary">Supervisión Especializada:</strong>
+                Contamos con un equipo de supervisores capacitados, siempre listos
+                para cuidar y asistir a los niños en todas las áreas del parque.
+                Su seguridad y diversión son nuestra máxima prioridad.
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team2} alt="Team Member 2" class="w-full h-auto" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Paul Newman</h3>
-          <p class="text-gray-70">Lead Writer</p>
-        </div>
-      </div>
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team3} alt="Team Member 3" class="w-full h-auto" />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">
-            Johanna Johnson
-          </h3>
-          <p class="text-gray-70">Tech Analyst</p>
+        <div class="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
+          <Image
+            src={parkDetailsImage}
+            alt="Parque Infantil"
+            class="w-full rounded-lg"
+          />
         </div>
       </div>
     </div>
   </div>
+
+  <div class="mb-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row pt-16">
+        <div class="lg:w-1/2 lg:pr-8">
+          <Image
+            src={parkMaintenanceImage}
+            alt="Mantenimiento del Parque"
+            class="w-full rounded-lg"
+          />
+        </div>
+        <div class="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
+          <h2 class="font-bold text-3xl text-primary">Festeja con nosotros</h2>
+          <hr class="my-4 border-primary" />
+          <p class="mb-4">
+            Celebra momentos inolvidables en nuestro parque infantil, el lugar
+            perfecto para fiestas llenas de alegría y diversión. Descubre cómo
+            hacemos de cada evento una experiencia mágica.
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-center">
+              <FaCheck className="text-primary mr-3 w-6 h-6 lg:w-12 lg:h-12" />
+              <div>
+                <strong class="text-primary">Fiestas Personalizadas:</strong>
+                Creamos fiestas temáticas según tus preferencias, con decoraciones
+                y actividades diseñadas especialmente para hacer de tu celebración
+                un momento único.
+              </div>
+            </li>
+            <li class="flex items-center">
+              <FaCheck className="text-primary mr-3 w-6 h-6 lg:w-12 lg:h-12" />
+              <div>
+                <strong class="text-primary">Diversión Garantizada:</strong>
+                Nuestras instalaciones cuentan con una variedad de juegos y atracciones
+                que entretienen y fascinan a niños de todas las edades.
+              </div>
+            </li>
+            <li class="flex items-center">
+              <FaCheck className="text-primary mr-3 w-6 h-6 lg:w-12 lg:h-12" />
+              <div>
+                <strong class="text-primary">Servicio Completo:</strong>
+                Ofrecemos todo lo necesario para tu fiesta, desde deliciosos bocadillos
+                hasta animación especializada, asegurando que cada detalle esté cuidado.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="mb-6">
+    <div class="flex flex-col items-center text-center mb-8">
+      <h5 class="bg-gray-900 font-bold text-white rounded px-2 py-1 uppercase">
+        Mapa
+      </h5>
+      <h2 class="font-bold text-2xl">Ubícanos en Google Maps</h2>
+    </div>
+    <div class="flex justify-center">
+      <div class="w-full md:w-2/3 map-responsive">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3934.2410706345886!2d-69.19798662497443!3d9.57447619051032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMzQnMjguMSJOIDY5wrAxMSc0My41Ilc!5e0!3m2!1sen!2sus!4v1703743054710!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps"
+          class="w-full h-full"></iframe>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="flex justify-center">
+    <a
+      href="https://www.happinesspark.net/"
+      class="bg-gray-900 text-white px-5 py-3 rounded hover:bg-primary-dark transition duration-300"
+    >
+      Visita nuestra web
+    </a>
+  </div>
+
+  <br />
+  <br />
 </MainLayout>

@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+const { link, imgSrc, altText, title, description } =
+  Astro.props as ProjectCardProps;
+
+export interface ProjectCardProps {
+  link: string;
+  altText: string;
+  imgSrc: string;
+  title: string;
+  description: string;
+}
+---
+
+<div class="mb-4 w-full px-2">
+  <div class="bg-gray-900 h-full rounded overflow-hidden shadow-lg">
+    <a href={link} class="no-underline">
+      <Image
+        src={imgSrc}
+        alt={altText}
+        class="w-full h-64 object-cover"
+        width={300}
+        height={200}
+      />
+      <div class="p-4">
+        <p class="text-white">
+          <strong class="text-gray-100 text-2xl">{title}</strong> - {
+            description
+          }
+        </p>
+      </div>
+    </a>
+  </div>
+</div>

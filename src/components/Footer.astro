@@ -14,39 +14,51 @@ import logo from "../images/logoblog.png";
 const user = { role: "admin" };
 ---
 
-<footer class="bg-gray-900 text-white py-8 px-3">
+<footer class="bg-gray-900 text-white py-8 px-3 mt-8">
   <div class="container mx-auto">
     <hr class="border-t border-gray-700 my-5" />
     <div class="flex flex-wrap justify-between mb-5">
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
-        <a href="/">
-          <Image src={logo} alt="logo" class="w-full h-auto" />
-        </a>
+        <p class="mt-3">
+          <strong class="text-xl font-semibold">Horarios:</strong>
+          <br />
+          Viernes, sábados y Domingos: 2:30 pm - 10:00 pm "Abiertos al público general"
+          <br />
+          Evento privado: 2:30 pm - 9:00 pm "Cualquier día de la semana"
+        </p>
       </div>
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
         <h5 class="text-xl font-semibold mb-2">Servicios</h5>
         <ul class="list-none">
           <li class="mb-2">
             <a
-              href="https://www.happinesspark.net/picatutorta"
+              href="https://www.happinesspark.net/fiestaprivada"
               class="text-white hover:text-gray-400"
             >
               <FaBirthdayCake className="inline mr-2" /> Pica Tu Torta
             </a>
           </li>
           <li class="mb-2">
-            <a href="/fiestaprivada" class="text-white hover:text-gray-400">
+            <a
+              href="https://www.happinesspark.net/fiestaprivada"
+              class="text-white hover:text-gray-400"
+            >
               <LuPartyPopper className="inline mr-2" /> Fiesta Privada
             </a>
           </li>
           <li class="mb-2">
-            <a href="/eventos" class="text-white hover:text-gray-400">
+            <a
+              href="https://www.happinesspark.net/eventos"
+              class="text-white hover:text-gray-400"
+            >
               <FaCamera className="inline mr-2" /> Eventos
             </a>
           </li>
           <li class="mb-2">
             <a
-              href={user.role === "admin" ? "/admin-dashboard" : "/dashboard"}
+              href={user.role === "admin"
+                ? "https://www.happinesspark.net/admin-dashboard"
+                : "https://www.happinesspark.net/dashboard"}
               class="text-white hover:text-gray-400"
             >
               <FaCandyCane className="inline mr-2" /> Mi cuenta
@@ -55,14 +67,14 @@ const user = { role: "admin" };
         </ul>
       </div>
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
-        <h5 class="text-xl font-semibold">Contacto</h5>
+        <h5 class="text-xl font-semibold mb-3">Contacto</h5>
         <p>
-          <span class="font-semibold">Dirección:</span> Av. Paez, edif. Rovi planta
-          baja, Local: s/n. Sector Principal Acarigua, Portuguesa
+          Dirección: Av. Paez, edif. Rovi planta baja, Local: s/n. Sector
+          Principal Acarigua, Portuguesa
           <br />
-          <span class="font-semibold">Teléfono:</span> 0414-5020050
+          Teléfono: 0414-5020050
           <br />
-          <span class="font-semibold">Email:</span> happiness.park@gmail.com
+          Email: happiness.park@gmail.com
         </p>
       </div>
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
@@ -74,7 +86,7 @@ const user = { role: "admin" };
             rel="noopener noreferrer"
             class="text-white hover:text-gray-400"
           >
-            <FaInstagram className="text-2xl" size="40" />
+            <FaInstagram className="text-2xl" />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=100095143322214"
@@ -82,13 +94,19 @@ const user = { role: "admin" };
             rel="noopener noreferrer"
             class="text-white hover:text-gray-400"
           >
-            <FaFacebookF className="text-2xl" size="40" />
+            <FaFacebookF className="text-2xl" />
           </a>
         </div>
       </div>
     </div>
     <hr class="border-t border-gray-700 my-5" />
     <div class="text-center">
+      <div class="w-full md:w-1/6 mx-auto">
+        <a href="/">
+          <Image src={logo} alt="logo" class="w-full h-auto" />
+        </a>
+      </div>
+
       <p class="mb-0">
         © 2023 Happiness Park C.A. Todos los derechos reservados.
       </p>
